@@ -80,15 +80,20 @@
             <div id="seccion-tres" class="div-principal">
                 <div class="form-container">
                     <h2>Reservas</h2>
-                    <form>
+                    <form id="formulario1">
                         <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <label for="nombre">Nombre:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="text" id="nombre" name="nombre">
                         </div>
 
                         <div class="form-group">
-                            <label for="horario">Horario:</label>
-                            <select id="horario" name="horario" required>
+                            <label for="fecha">Fecha:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="horario">&nbsp;&nbsp;&nbsp;Horario:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <select id="horario" name="horario">
                                 <option value="">&nbsp;</option>
                                 <option value="19:00">19:00</option>
                                 <option value="19:30">19:30</option>
@@ -103,8 +108,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="personas">Personas:</label>
-                            <select id="personas" name="personas" required>
+                            <label for="personas">Personas:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <select id="personas" name="personas">
                                 <option value="">&nbsp;</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -116,19 +121,20 @@
 
                         <div class="form-group">
                             <label for="comentarios">Comentarios:</label>
-                            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                            <textarea id="comentarios" name="comentarios" rows="1"></textarea>
                         </div>
 
                         <!--mas arriba para que quede bien--><a id="ubicacion"></a>
 
                         <button type="submit">Reservar ✔</button>
+                        <div id="respuesta1"></div>
                     </form>
                 </div>
             </div>
 
             <div id="seccion-cuatro" class="div-principal">
                 <div class="form-container">
-                    <h2>Visitanos en:</h2>
+                    <h2>Visítanos en:</h2>
                     <p>Av. Cabildo 3200 </p>
                     <p>Ciudad Autónoma de Buenos Aires</p>
                     <p>CP 1429</p>
@@ -157,30 +163,33 @@
                 <!--mas arriba para que quede bien--><a id="contacto"></a>
                 <div class="form-container">
                     <h2>Contacto</h2>
-                    <form>
+                    <form id="formulario2">
                         <div class="form-group">
-                            <label for="nombre2">Nombre:</label>
-                            <input type="text" id="nombre2" name="nombre2" required>
+                            <label for="nombre2">Nombre:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="text" id="nombre2" name="nombre2">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eMail:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eMail:<span
+                                    style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="email" id="email" name="email">
                         </div>
 
                         <div class="form-group">
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="7" required></textarea>
+                            <label for="mensaje">Mensaje:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="6"></textarea>
                         </div>
 
-                        <button type="submit">Dejá tu mensaje ✔</button>
+                        <button type="submit">Deja tu mensaje ✔</button>
+                        <div id="respuesta2"></div>
                     </form>
+
                 </div>
             </div>
 
             <div id="seccion-nueve" class="div-principal imagen">
                 <div class="image-container">
-                    <img src="./IMG/imagen_4.jpg" alt="Imagen 4">
+                    <img src="./IMG/imagen_4.jpeg" alt="Imagen 4">
                 </div>
             </div>
 
