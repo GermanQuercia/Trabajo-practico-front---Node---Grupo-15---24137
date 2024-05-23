@@ -92,35 +92,42 @@ for (let i = 0; i < todos.length; i++) {
     let targetId = this.getAttribute('href');
 
     let targetSection;
+    let blinkSection;
     switch (targetId) {
       case '#reservas':
-        targetSection = document.getElementById("seccion-tres");
+        targetSection = document.getElementById("reservas");
+        blinkSection = document.getElementById("seccion-tres");
         break;
       case "#ubicacion":
-        targetSection = document.getElementById("seccion-cuatro");
+        targetSection = document.getElementById("ubicacion");
+        blinkSection = document.getElementById("seccion-cuatro");
         break;
       case "#contacto":
-        targetSection = document.getElementById("seccion-ocho");
+        targetSection = document.getElementById("contacto");
+        blinkSection = document.getElementById("seccion-ocho");
         break;
     };
 
     targetSection.scrollIntoView({ behavior: 'smooth' });
 
-    targetSection.style.backgroundColor = 'rgb(255, 239, 215)';
-    targetSection.style.border = '2px dotted green';
     setTimeout(() => {
-      targetSection.style.backgroundColor = '';
-      targetSection.style.border = '2px solid rgb(194, 6, 6)';
-    }, 500);
-    
-    setTimeout(() => {
-      targetSection.style.backgroundColor = 'rgb(255, 239, 215)';
-      targetSection.style.border = '2px dashed blue';
-    }, 1000);
+      blinkSection.style.backgroundColor = 'rgb(255, 239, 215, 0.35)';
+      blinkSection.style.border = '2px dotted green';
+    }, 700);
 
     setTimeout(() => {
-      targetSection.style.backgroundColor = '';
-      targetSection.style.border = '2px solid rgb(194, 6, 6)';
-    }, 1500);
+      blinkSection.style.backgroundColor = '';
+      blinkSection.style.border = '2px solid rgb(194, 6, 6)';
+    }, 1200);
+
+    setTimeout(() => {
+      blinkSection.style.backgroundColor = 'rgb(255, 239, 215, 0.35)';
+      blinkSection.style.border = '2px dashed blue';
+    }, 1700);
+
+    setTimeout(() => {
+      blinkSection.style.backgroundColor = '';
+      blinkSection.style.border = '2px solid rgb(194, 6, 6)';
+    }, 2200);
   })
 }
